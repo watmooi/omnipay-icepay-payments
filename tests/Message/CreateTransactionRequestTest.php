@@ -92,6 +92,73 @@ class CreateTransactionRequestTest extends AbstractTestCase
             ],
         ];
         $this->assertEquals($expectedData, $this->request->getData());
+
+        $card = new \Omnipay\Common\CreditCard([
+            'billingAddress1' => 'Diependaalselaan 153',
+            'billingCity' => 'Hilversum',
+            'billingPostcode' => '1214KA',
+            'billingCountry' => 'NL',
+        ]);
+        $card->setFirstName('Roger');
+        $card->setLastName('Rabbit');
+        $card->setEmail('roger@email.com');
+        $card->setPhone('0123456789');
+        $this->request->setCard($card);
+
+        $expectedData = [
+            'Contract' => [
+                'ContractProfileId' => '64eb3717-8b5d-4088-8108-93224675e538',
+                'AmountInCents' => 1337,
+                'CurrencyCode' => 'EUR',
+                'Reference' => '2fad9b1b-a2d3-455c-bc29-b79516fd3257-random-uuid-hex',
+            ],
+            'Postback' => [
+                'UrlCompleted' => 'https://www.superbrave.nl/return-url',
+                'UrlError' => 'https://www.superbrave.nl/cancel-url',
+                'UrlsNotify' => [
+                    'https://www.superbrave.nl/notify-url',
+                ],
+            ],
+            'IntegratorFootprint' => [
+                'IPAddress' => '127.0.0.1',
+                'TimeStampUTC' => '0',
+            ],
+            'ConsumerFootprint' => [
+                'IPAddress' => '127.0.0.1',
+                'TimeStampUTC' => '0',
+            ],
+            'Fulfillment' => [
+                'PaymentMethod' => 'IDEAL',
+                'IssuerCode' => 'ABNAMRO',
+                'AmountInCents' => 1337,
+                'CurrencyCode' => 'EUR',
+                'Timestamp' => '2019-03-09T12:00:00Z',
+                'LanguageCode' => 'nl',
+                'CountryCode' => 'NL',
+                'Order' => [
+                    'OrderNumber' => '2fad9b1b-a2d3-455c-bc29-b79516fd3257',
+                    'CurrencyCode' => 'EUR',
+                    'TotalGrossAmountCents' => 1337,
+                    'TotalNetAmountCents' => 1337,
+                ],
+                'Reference' => '2fad9b1b-a2d3-455c-bc29-b79516fd3257-random-uuid-hex',
+                'Description' => '2fad9b1b-a2d3-455c-bc29-b79516fd3257-random-uuid-hex',
+                'Consumer' => [
+                    'Address' => [
+                        'CountryCode' => 'NL',
+                        'City' => 'Hilversum',
+                        'PostalCode' => '1214KA',
+                        'Street' => 'Diependaalselaan 153',
+                    ],
+                    'FirstName' => 'Roger',
+                    'LastName' => 'Rabbit',
+                    'Email' => 'roger@email.com',
+                    'Phone' => '0123456789',
+                    'Category' => 'Person'
+                ],
+            ],
+        ];
+        $this->assertEquals($expectedData, $this->request->getData());
     }
 
     /**

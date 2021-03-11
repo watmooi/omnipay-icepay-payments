@@ -58,6 +58,29 @@ class CreateTransactionRequest extends AbstractRequest
             ],
         ];
 
+        if ($card = $this->getCard()) {
+            $data['Fulfillment']['Consumer'] = [
+                'Address' => [
+                    'CountryCode' => $card->getBillingCountry(),
+                    'City' => $card->getBillingCity(),
+                    'PostalCode' => $card->getBillingPostcode(),
+                    'Street' => $card->getBillingAddress1(),
+                ],
+                'FirstName' => $card->getBillingFirstName(),
+                'LastName' => $card->getBillingLastName(),
+                'Email' => $card->getEmail(),
+                'Phone' => $card->getBillingPhone(),
+            ];
+
+            if ($card->getCompany() > '') {
+                $data['Fulfillment']['Consumer']['Category'] = 'Company';
+            } else {
+                $data['Fulfillment']['Consumer']['Category'] = 'Person';
+
+            }
+        }
+
+
         return array_merge($parentData, $data);
     }
 

@@ -2,6 +2,22 @@
 
 namespace Omnipay\IcepayPayments\Tests;
 
+require_once ('AbstractTestCase.php');
+
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Gateway.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/AbstractRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/AbstractResponse.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/CompleteAuthoriseAndCaptureRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/CompleteAuthoriseAndCaptureResponse.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/CreateTransactionRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/CreateTransactionResponse.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/RefundRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/RefundResponse.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/TransactionStatusRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/TransactionStatusResponse.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/PaymentMethodsRequest.php');
+require_once ('D:/src/watmooimodules/omnipay-icepay-payments/src/Message/PaymentMethodsResponse.php');
+
 use Omnipay\Common\GatewayInterface;
 use Omnipay\IcepayPayments\Gateway;
 use Omnipay\IcepayPayments\Message\CompleteAuthoriseAndCaptureRequest;
@@ -20,9 +36,19 @@ class GatewayTest extends AbstractTestCase
     public $gateway;
 
     /**
+     * @var CreditCard
+     */
+    public $card;
+
+    /**
      * @var array
      */
     private $options;
+
+    /**
+     * @var array
+     */
+    private $customer;
 
     /**
      * Creates a new Gateway instance for testing.
@@ -39,6 +65,7 @@ class GatewayTest extends AbstractTestCase
             'issuerCode' => 'ABNAMRO',
             'reference' => '829c7998-6497-402c-a049-51801ba33662',
         ];
+
     }
 
     /**

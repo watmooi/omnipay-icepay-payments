@@ -9,6 +9,7 @@ use Omnipay\IcepayPayments\Message\CompleteAuthoriseAndCaptureRequest;
 use Omnipay\IcepayPayments\Message\CreateTransactionRequest;
 use Omnipay\IcepayPayments\Message\RefundRequest;
 use Omnipay\IcepayPayments\Message\TransactionStatusRequest;
+use Omnipay\IcepayPayments\Message\PaymentMethodsRequest;
 
 /**
  * Icepay gateway for Omnipay.
@@ -122,6 +123,17 @@ class Gateway extends AbstractGateway
     public function fetchTransaction(array $options = []): RequestInterface
     {
         return $this->createRequest(TransactionStatusRequest::class, $options);
+    }
+
+    /**
+     * Get payment methods.
+     *
+     * @param array $options
+     * @return RequestInterface
+     */
+    public function fetchPaymentMethods(array $options = []): RequestInterface
+    {
+        return $this->createRequest(PaymentMethodsRequest::class, $options);
     }
 
     /**

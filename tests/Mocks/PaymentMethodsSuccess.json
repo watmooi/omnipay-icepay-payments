@@ -1,0 +1,236 @@
+{
+    "paymentMethods": [
+        {
+            "paymentMethodCode": "AFTERPAY",
+            "description": "AfterPay payment",
+            "issuers": [
+                {
+                    "issuerKeyword": "AFTERPAY",
+                    "description": "AfterPay"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "ALIPAY",
+            "description": "AliPay",
+            "issuers": [
+                {
+                    "issuerKeyword": "ALIPAY",
+                    "description": "AliPay"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "BANCONTACT",
+            "description": "Bancontact payment",
+            "issuers": [
+                {
+                    "issuerKeyword": "BANCONTACT",
+                    "description": "BANCONTACT"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "CREDITCARD",
+            "description": "Creditcard payment",
+            "issuers": [
+                {
+                    "issuerKeyword": "CREDITCARD",
+                    "description": "CreditCard"
+                },
+                {
+                    "issuerKeyword": "MASTER",
+                    "description": "Master Card"
+                },
+                {
+                    "issuerKeyword": "VISA",
+                    "description": "VISA"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "CREDITCLICK",
+            "description": "CreditClick payment",
+            "issuers": [
+                {
+                    "issuerKeyword": "CREDITCLICK",
+                    "description": "CreditClick"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "DIRECTDEBIT",
+            "description": "DirectDebit",
+            "issuers": [
+                {
+                    "issuerKeyword": "DIRECTDEBIT",
+                    "description": "DirectDebit"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "EPS",
+            "description": "Eps",
+            "issuers": [
+                {
+                    "issuerKeyword": "EPS",
+                    "description": "EPS"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "GIROPAY",
+            "description": "Giropay",
+            "issuers": [
+                {
+                    "issuerKeyword": "GIROPAY",
+                    "description": "Giropay"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "IDEAL",
+            "description": "iDEAL payment",
+            "issuers": [
+                {
+                    "issuerKeyword": "ABNAMRO",
+                    "description": "ABN AMRO"
+                },
+                {
+                    "issuerKeyword": "ASNBANK",
+                    "description": "ASN Bank"
+                },
+                {
+                    "issuerKeyword": "BUNQ",
+                    "description": "Bunq"
+                },
+                {
+                    "issuerKeyword": "HANDELSBANKEN",
+                    "description": "HANDELSBANKEN"
+                },
+                {
+                    "issuerKeyword": "ING",
+                    "description": "ING"
+                },
+                {
+                    "issuerKeyword": "KNAB",
+                    "description": "KNAB"
+                },
+                {
+                    "issuerKeyword": "MONEYOU",
+                    "description": "MONEYOU"
+                },
+                {
+                    "issuerKeyword": "RABOBANK",
+                    "description": "Rabobank"
+                },
+                {
+                    "issuerKeyword": "SNSBANK",
+                    "description": "SNS BANK"
+                },
+                {
+                    "issuerKeyword": "SNSREGIOBANK",
+                    "description": "SNS Regio Bank"
+                },
+                {
+                    "issuerKeyword": "TRIODOSBANK",
+                    "description": "Triodos Bank"
+                },
+                {
+                    "issuerKeyword": "VANLANSCHOT",
+                    "description": "Van Lanschot"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "ONLINEUBERWEISEN",
+            "description": "OnlineUberweisen",
+            "issuers": [
+                {
+                    "issuerKeyword": "ONLINEUBERWEISEN",
+                    "description": "OnlineUberweisen"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "PAYPAL",
+            "description": "Paypal",
+            "issuers": [
+                {
+                    "issuerKeyword": "PAYPAL",
+                    "description": "Paypal"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "PAYSAFECARD",
+            "description": "PaysafeCard",
+            "issuers": [
+                {
+                    "issuerKeyword": "PAYSAFECARD",
+                    "description": "PAYSAFECARD"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "POS",
+            "description": "POS",
+            "issuers": [
+                {
+                    "issuerKeyword": "POS",
+                    "description": "POS"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "SAFETYPAY",
+            "description": "SafetyPay",
+            "issuers": [
+                {
+                    "issuerKeyword": "SAFETYPAY",
+                    "description": "SafetyPay"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "SOFORT",
+            "description": "Sofort",
+            "issuers": [
+                {
+                    "issuerKeyword": "SOFORT",
+                    "description": "Sofort"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "UNIONPAY",
+            "description": "UnionPay",
+            "issuers": [
+                {
+                    "issuerKeyword": "UNIONPAY",
+                    "description": "UnionPay"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "WECHATPAY",
+            "description": "WeChat Pay",
+            "issuers": [
+                {
+                    "issuerKeyword": "WECHATPAY",
+                    "description": "WECHATPAY"
+                }
+            ]
+        },
+        {
+            "paymentMethodCode": "WIRETRANSFER",
+            "description": "WIreTransfer",
+            "issuers": [
+                {
+                    "issuerKeyword": "WIRETRANSFER",
+                    "description": "WireTransfer"
+                }
+            ]
+        }
+    ]
+}

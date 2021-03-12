@@ -33,12 +33,23 @@ class PaymentMethodsResponseTest extends AbstractTestCase
     public function testResponseReturnsSuccessful(): void
     {
         $responseJsonBody = json_decode(file_get_contents(__DIR__.'/../Mocks/PaymentMethodsSuccess.json'), true);
-
         $response = new PaymentMethodsResponse($this->request, $responseJsonBody, 200);
 
         $responseData = $response->getData();
 
         $this->assertTrue($response->isSuccessful());
         $this->assertIsArray($responseData['paymentMethods']);
+    }
+
+    /**
+     * Tests if TransactionStatusResponse::isSuccessful will return true with the given json response.
+     */
+    public function testResponseReturnsError(): void
+    {
+        $responseJsonBody = json_decode(file_get_contents(__DIR__.'/../Mocks/PaymentMethodsFail.json'), true);
+        $response = new PaymentMethodsResponse($this->request, $responseJsonBody, 400);
+
+        $this->assertFalse($response->isSuccessful());
+        $this->assertEquals('contractProfileId = The value \'aaa95cb1e1c-d8b7-4c72-9b75-d76a89d18f2d\' is not valid. ;', $response->getMessage());
     }
 }

@@ -112,4 +112,37 @@ abstract class AbstractResponse extends OmnipayAbstractResponse
     {
         return $this->data['transactionId'] ?? null;
     }
+
+
+    /**
+     * {@inheritdoc}
+     *
+     * Returns Description of the first error received from Payment Gateway.
+     *
+     * Expects response body in this form:
+     * [
+     *  {
+     *      "Error": {
+     *      "Code": "RequestModelValidationFailed",
+     *      "Description": "Invalid request model",
+     *      "Parameters": [
+     *          {
+     *              "Name": "contractProfileId",
+     *              "Value": "The value '12345-abc-123-abcde' is not valid."
+     *          }
+     *        ]
+     *      },
+     *      "ErrorAt": null,
+     *      "Description": "contractProfileId = The value '12345-abc-123-abcde' is not valid. ;"
+     *  }
+     * ]
+     */
+    public function getMessage(): string
+    {
+        $data = $this->getData();
+        if (is_array($data) && isset($data[0]) && isset($data[0]['Description'])) {
+            return $data[0]['Description'];
+        }
+        return "Unknown Error";
+    }
 }

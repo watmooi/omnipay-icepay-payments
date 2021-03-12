@@ -48,18 +48,6 @@ class PaymentMethodsResponse extends AbstractResponse
     /**
      * {@inheritdoc}
      */
-    public function getMessage(): string
-    {
-        $data = $this->getData();
-        if (isset($data[0]) && isset($data[0]['Description'])) {
-            return $data[0]['Description'];
-        }
-        return "Unknown";
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function isCancelled(): bool
     {
         return isset($this->data['status']) && $this->data['status'] === self::RESPONSE_STATUS_CANCELLED;

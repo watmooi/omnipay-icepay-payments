@@ -1,0 +1,17 @@
+{
+  "FeedbackType": "Transaction",
+  "ContractProfileId": "12345678-11aa-22bb-33cc-987654321012",
+  "TransactionId": "tid-1111-1111-1111-abcdef",
+  "Reference": "0000001-001",
+  "StatusCode": "COMPLETED",
+  "StatusDetails": "",
+  "Amount": 100,
+  "CurrencyCode": "EUR",
+  "PaymentMethodCode": "IDEAL",
+  "PaymentDetails": {
+    "TransactionReference": "",
+    "ConsumerName": "Hr RR Rabbit",
+    "ConsumerIban": "NL53INGB0001111111",
+    "ConsumerBic": "INGBNL2A"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "FeedbackType": "Transaction",
+  "ContractProfileId": "12345678-11aa-22bb-33cc-987654321012",
+  "TransactionId": "tid-1111-1111-1111-abcdef",
+  "Reference": "0000001-001",
+  "StatusCode": "CANCELLED",
+  "StatusDetails": "",
+  "Amount": 100,
+  "CurrencyCode": "EUR",
+  "PaymentMethodCode": "IDEAL",
+  "PaymentDetails": {}
+}

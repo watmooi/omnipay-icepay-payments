@@ -1,0 +1,32 @@
+{
+  "FeedbackType": "Transaction",
+  "ContractProfileId": "12345678-11aa-22bb-33cc-987654321012",
+  "TransactionId": "tid-1111-1111-1111-abcdef",
+  "Reference": "0000001-001",
+  "StatusCode": "COMPLETED",
+  "StatusDetails": "",
+  "Amount": 100,
+  "CurrencyCode": "EUR",
+  "PaymentMethodCode": "CREDITCARD",
+  "PaymentDetails": {
+    "ThreeDsVersion": "2",
+    "ThreeDsFlow": "frictionless",
+    "Brand": "Mastercard",
+    "LiabilityOwner": "Issuer",
+    "TrackingMemberCode": "12345678-1111-2222-3333-ababababa12234",
+    "TransactionGuid": "111111111-1111-2222-3333-ababababa12234",
+    "TransactionId": "01020304050",
+    "TransactionDateTime": "3/13/2021 2:28:53 PM",
+    "Message": "The operation was successfully processed.",
+    "Result": "0",
+    "Cdc": "[{\"Items\":[{\"Key\":\"BankCode\",\"Value\":\"00\"},{\"Key\":\"BankMessage\",\"Value\":\"Approved\"},{\"Key\":\"BankApprovalCode\",\"Value\":\"355734\"},{\"Key\":\"CVVResult\",\"Value\":\"M\"},{\"Key\":\"SchemeTransactionID\",\"Value\":\"ABCD1XAA00000  \"}],\"Name\":\"BankInformation\"},{\"Items\":[{\"Key\":\"CardId\",\"Value\":\"999999999\"},{\"Key\":\"CardGuid\",\"Value\":\"zzzzzzzzz-11111-11111-1111-aaaaaaaaaaaa\"}],\"Name\":\"CardInformation\"}]",
+    "Cdc_BankInformation_BankCode": "00",
+    "Cdc_BankInformation_BankMessage": "Approved",
+    "Cdc_BankInformation_BankApprovalCode": "355734",
+    "Cdc_BankInformation_CVVResult": "M",
+    "Cdc_BankInformation_SchemeTransactionID": "ABCD1XAA00000",
+    "Cdc_CardInformation_CardId": "999999999",
+    "Cdc_CardInformation_CardGuid": "zzzzzzzzz-11111-11111-1111-aaaaaaaaaaaa",
+    "IsFraudCheckRequested": "false"
+  }
+}

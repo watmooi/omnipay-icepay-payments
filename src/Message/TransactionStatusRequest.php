@@ -58,7 +58,8 @@ class TransactionStatusRequest extends AbstractRequest
      */
     private function getTransactionStatusFromPostBack(): ?TransactionStatusResponse
     {
-        if (stripos($this->httpRequest->getContentType(), 'json') === false) {
+        $contentType = $this->httpRequest->getContentType();
+        if (!isset($contentType) || stripos($contentType, 'json') === false) {
             return null;
         }
 

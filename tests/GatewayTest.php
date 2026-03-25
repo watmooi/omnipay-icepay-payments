@@ -148,7 +148,7 @@ class GatewayTest extends AbstractTestCase
      *
      * @return array
      */
-    public function provideInitializeBaseUrlCases(): array
+    public static function provideInitializeBaseUrlCases(): array
     {
         return [
             [
